@@ -1,0 +1,50 @@
+//color
+
+$mainColor: #916000;
+$secondColor: #8d8d8d;
+$lightColor: #e0e0e0;
+$mainColor-light: #ac8a46;
+$gray: #707070;
+$lightGray: #a5a5a5;
+$formBColor: #ced4da;
+$white: #fff;
+$black: #000;
+$dark-gray: #212529;
+
+$themes: (
+  "mainColor": $mainColor,
+  "secondColor": $secondColor,
+  "lightColor": $lightColor,
+  "mainColor-light": $mainColor-light,
+  "white": $white,
+  "black": $black,
+  "dark-gray": $dark-gray,
+  "lightGray": $lightGray,
+  "formBColor": $formBColor,
+);
+
+//grid
+$gutter: 30px;
+$gridNum: 12;
+$maxW: 1140px;
+
+//font size
+
+$fontSize-num: 6;
+$fontSize: (
+  1: 40px,
+  2: 32px,
+  3: 24px,
+  4: 20px,
+  5: 16px,
+  6: 14px,
+);
+
+$lineHeight: (
+  1: 60px,
+  2: 48px,
+  3: 36px,
+  4: 30px,
+  5: 24px,
+  6: 21px,
+);

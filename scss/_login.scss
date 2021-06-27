@@ -1,0 +1,34 @@
+.text-mainColor {
+  text-decoration: none;
+  &:hover {
+    color: darken($mainColor, 10%);
+  }
+}
+
+.inputStyle {
+  height: 38px;
+  width: 100%;
+  border: 1px solid $formBColor;
+}
+
+.btn-Outline {
+  height: 38px;
+  background-color: $white;
+  border: 1px solid $mainColor;
+  color: $mainColor;
+  cursor: pointer;
+  &:hover {
+    background-color: darken($white, 10%);
+  }
+}
+
+.btn-color {
+  height: 38px;
+  background-color: $mainColor;
+  border: 1px solid $mainColor;
+  color: $white;
+  cursor: pointer;
+  &:hover {
+    background-color: darken($mainColor, 10%);
+  }
+}

@@ -1,0 +1,62 @@
+//items
+.product-items {
+  max-width: 255px;
+  margin-bottom: 60px;
+  @include pad {
+    max-width: 165px;
+  }
+  a {
+    display: block;
+    font-size: map-get($fontSize, 5);
+    line-height: map-get($lineHeight, 5);
+    text-decoration: none;
+    color: $black;
+    &:hover {
+      color: lighten($black, 50%);
+    }
+
+    h3 {
+      font-size: map-get($fontSize, 3);
+      line-height: map-get($lineHeight, 3);
+      font-weight: bold;
+    }
+    p {
+      span {
+        color: $secondColor;
+        text-decoration: line-through;
+      }
+    }
+  }
+}
+//btn
+.btn-box {
+  display: flex;
+  a {
+    color: $mainColor;
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+      color: darken($mainColor-light, 10%);
+    }
+  }
+}
+//page
+.page {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  a {
+    display: block;
+    font-size: map-get($fontSize, 4);
+    line-height: map-get($lineHeight, 4);
+    color: $black;
+    padding: 5px 10px;
+    &:hover {
+      color: darken($mainColor-light, 10%);
+    }
+  }
+  a.active {
+    color: $mainColor-light;
+  }
+}

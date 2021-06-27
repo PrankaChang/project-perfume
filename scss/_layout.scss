@@ -1,0 +1,186 @@
+//grid
+
+.container {
+  max-width: $maxW;
+  margin: 0 auto;
+  padding: 0 $gutter/2; // 補上 row 的 margin
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap; // 內容超過 100% 後會換行
+}
+
+@for $i from 1 through $gridNum {
+  .col-#{$i},
+  .col-md-#{$i} {
+    max-width: 100% * ($i/$gridNum);
+    flex: 0 0 (100% * ($i/$gridNum));
+  }
+}
+
+@include pad {
+  @for $i from 1 through $gridNum {
+    .col-#{$i} {
+      max-width: 100%;
+      //padding: 0 ($gutter / 2); // col 之間的距離
+      flex-basis: 100%; // col 佔據的寬度
+    }
+  }
+}
+
+//header
+.menu {
+  display: flex;
+  .menu-item {
+    .menu-item-link {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      font-size: 1.25rem;
+      color: $secondColor;
+      line-height: 30px;
+      padding: 5px 15px;
+      span {
+        padding: 1px;
+      }
+      &:hover {
+        color: darken($secondColor, 10%);
+      }
+    }
+
+    //footer-menu
+    .text-white {
+      color: $white;
+      &:hover {
+        color: darken($white, 10%);
+      }
+    }
+  }
+}
+.phone-shopCar-btn {
+  position: relative;
+
+  .label {
+    position: absolute;
+    background-color: $mainColor;
+    color: $white;
+    font-size: 12px;
+    border-radius: 100rem;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    right: 5px;
+    top: -5px;
+    transform: scale(0.7, 0.7);
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .menu-pc {
+    @include pad {
+      display: none;
+    }
+  }
+  .menu-pad {
+    display: none;
+    @include pad {
+      display: flex;
+    }
+  }
+}
+
+.dropdown {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($gray, 0.3);
+  top: 40px;
+
+  li {
+    a {
+      display: block;
+      width: 100%;
+      font-size: 20px;
+      line-height: 30px;
+      padding: 13px 0;
+      text-align: center;
+      background-color: $gray;
+      color: $white;
+      border-bottom: 1px solid $white;
+      text-decoration: none;
+      &:active {
+        background-color: lighten($gray, 10%);
+      }
+    }
+  }
+}
+
+//classMenu
+.productClass {
+  background-color: $mainColor;
+  display: block;
+  ul {
+    display: flex;
+    a {
+      display: block;
+      font-size: map-get($fontSize, 4);
+      line-height: map-get($lineHeight, 4);
+      color: $white;
+      text-decoration: none;
+      padding: 10px 5px;
+      margin-right: 13px;
+      &:hover {
+        color: darken($white, 10%);
+      }
+    }
+  }
+  @include pad {
+    display: none;
+  }
+}
+
+//footer
+.footer {
+  background: url(../images/index10.jpeg) left center;
+  background-size: cover;
+  .site {
+    padding-top: 312px;
+    padding-bottom: 112px;
+  }
+  .form-input {
+    @include form-input(216px, 60px);
+    width: 65%;
+  }
+  .form-send {
+    @include form-btn(129px, 60px);
+  }
+}
+
+.footer-bar {
+  background-color: $mainColor;
+  color: $white;
+  padding: 28px 0;
+
+  .footer-bar-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+    @include pad {
+      justify-content: space-between;
+    }
+  }
+}
+
+.footer-menu {
+  @include pad {
+    display: none;
+  }
+}

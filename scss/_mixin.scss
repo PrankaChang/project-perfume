@@ -1,0 +1,35 @@
+@mixin pad {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin btn($color) {
+  color: $color;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid $color;
+  border-radius: 5rem;
+  padding: 10px 5px;
+}
+//form
+@mixin form-btn($width, $height) {
+  border: 1px solid $mainColor;
+  background-color: $mainColor;
+  color: $white;
+  min-height: $height;
+  max-width: $width;
+  margin-left: -5px;
+  width: 35%;
+  cursor: pointer;
+  &:hover {
+    background-color: darken($mainColor, 5%);
+    border-color: darken($mainColor, 5%);
+  }
+}
+@mixin form-input($width, $height) {
+  border: 1px solid $mainColor;
+  min-height: $height;
+  max-width: $width;
+}

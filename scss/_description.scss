@@ -1,0 +1,42 @@
+.form-select {
+  @include form-input(160px, 50px);
+  width: 45%;
+}
+.form-btn {
+  @include form-btn(190px, 50px);
+  width: 55%;
+}
+
+.a-link {
+  a {
+    color: $mainColor;
+    display: flex;
+    text-decoration: none;
+
+    &:hover {
+      color: darken($mainColor-light, 10%);
+    }
+  }
+}
+
+.description-imgsSite {
+  margin-top: -188px;
+  .img-a {
+    padding-right: 15px;
+  }
+  .img-b {
+    padding-left: 15px;
+  }
+}
+
+@include pad {
+  .description-imgsSite {
+    margin-top: 0px;
+    .img-a {
+      padding-right: 0px;
+    }
+    .img-b {
+      padding-left: 0px;
+    }
+  }
+}

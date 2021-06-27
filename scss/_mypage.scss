@@ -1,0 +1,62 @@
+.order2 {
+  order: 2;
+  @include pad {
+    order: 3;
+  }
+}
+
+.order3 {
+  order: 3;
+  @include pad {
+    order: 2;
+  }
+}
+.lineH-38 {
+  line-height: 38px;
+}
+.border-gray {
+  border: 1px solid $formBColor;
+}
+.d-s-none {
+  display: block;
+  @include pad {
+    display: none;
+  }
+}
+.underline {
+  border-bottom: 1px solid $dark-gray;
+}
+.ml-8 {
+  margin-left: 8px;
+}
+.memberMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+  @include pad {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  li {
+    a {
+      color: $secondColor;
+      padding: 2px 0px;
+      text-decoration: none;
+
+      &:hover {
+        border-bottom: 2px solid $mainColor;
+      }
+      @include pad {
+        padding: 0px 10px;
+      }
+    }
+  }
+}
+.formPosition {
+  display: flex;
+  justify-content: start;
+  @include pad {
+    justify-content: space-between;
+  }
+}
